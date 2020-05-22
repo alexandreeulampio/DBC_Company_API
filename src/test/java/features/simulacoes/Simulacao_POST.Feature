@@ -10,13 +10,16 @@ Feature: Inserir simulacoes
     Then Eu visualizo o resultado do cadastro "<StatusCode>" "<Mensagem>"
 
     Examples:
-      | StatusCode | nome          | cpf         | email              | valor | parcelas | seguro | Mensagem                         |
-      | 201        | Fulano        | 21222222221 | fulano@gmail.com   | 11000 | 3        | true   |                                  |
-      | 400        | Deltrano      | 17822386034 | deltrano@gmail.com | 20000 | 5        | false  | CPF duplicado                    |
-      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  | 3        | true   | CPF duplicado                    |
-      | 400        |               | 97093236014 | email@email.com    | 1200  | 3        | true   |                                  |
-      | 400        | Fulano de Tal |             | email@email.com    | 1200  | 3        | true   | CPF duplicado                    |
-      | 400        | Fulano de Tal | 97093236014 |                    | 1200  | 3        | true   | E-mail deve ser um e-mail válido |
-      | 400        | Fulano de Tal | 97093236014 | email@email.com    |       | 3        | true   |                                  |
-      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  |          | true   |                                  |
-      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  | 3        |        |                                  |
+      | StatusCode | nome          | cpf         | email              | valor | parcelas | seguro | Mensagem                                  |
+      | 201        | Fulano        | 21222222221 | fulano@gmail.com   | 11000 | 3        | true   |                                           |
+      | 400        | Deltrano      | 17822386034 | deltrano@gmail.com | 20000 | 5        | false  | CPF duplicado                             |
+      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  | 3        | true   | CPF duplicado                             |
+      | 400        |               | 97093236014 | email@email.com    | 1200  | 3        | true   |                                           |
+      | 400        | Fulano de Tal |             | email@email.com    | 1200  | 3        | true   | CPF duplicado                             |
+      | 400        | Fulano de Tal | 97093236014 |                    | 1200  | 3        | true   | E-mail deve ser um e-mail válido          |
+      | 400        | Fulano de Tal | 97093236014 | email@email.com    |       | 3        | true   |                                           |
+      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  |          | true   |                                           |
+      | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  | 3        |        |                                           |
+      | 400        | Fulano        | 21322222221 | fulano@gmail.com   | 51000 | 3        | true   | Valor deve ser menor ou igual a R$ 40.000 |
+      | 400        | Fulano        | 21322522221 | fulano@gmail.com   | 1000  | 1        | true   | Parcelas deve ser igual ou maior que 2    |
+      | 400        | Fulano        | 21322522221 | fulano@gmail.com   | 1000  | 50       | true   | Parcelas deve ser igual ou menor que 48   |

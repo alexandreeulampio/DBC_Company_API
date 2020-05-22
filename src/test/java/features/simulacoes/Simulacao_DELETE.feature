@@ -10,7 +10,8 @@ Feature: Inserir simulacoes
     Then Eu visualizo o resultado "<StatusCode>"
 
     Examples:
-      | id   | StatusCode |
-      | 100  | 200        |
-      |      | 405        |
-      | abcd | 400        |
+      | id     | StatusCode |
+      | 100    | 200        |
+      |        | 405        |
+      | abcd   | 400        |
+      | 154542 | 404        |
