@@ -22,4 +22,4 @@ Feature: Inserir simulacoes
       | 400        | Fulano de Tal | 97093236014 | email@email.com    | 1200  | 3        |        |                                           |
       | 400        | Fulano        | 21322222221 | fulano@gmail.com   | 51000 | 3        | true   | Valor deve ser menor ou igual a R$ 40.000 |
       | 400        | Fulano        | 21322522221 | fulano@gmail.com   | 1000  | 1        | true   | Parcelas deve ser igual ou maior que 2    |
-      | 400        | Fulano        | 21322522221 | fulano@gmail.com   | 1000  | 50       | true   | Parcelas deve ser igual ou menor que 48   |
+      | 400        | Fulano        | 21322522221 | fulano@gmail.com   | 1000  | 51       | true   | Parcelas deve ser igual ou menor que 48   |
